@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css\index.css">
+</head>
+<body>
+      <div class="wrapper">
+        <svg>
+          <text x="50%" y="50%" dy=".35em" text-anchor="middle">
+            LOVING BORDADO
+          </text>
+        </svg>
+      </div>
+
+      <div class="men">
+        <nav class="menu-principal">
+            <a href="index.html" class="menu-principal" target="_self">Página inicial</a> |
+            <a href="produtos.html" class="menu-principal" target="_self">Produtos</a> |
+            <a href="contato.html" class="menu-principal" target="_self">Contatos</a>
+        </nav>
+      </div>
+     
+      <div class="row">
+        <div class="col-3 col-s-3 menu">
+          <ul>
+            <a href="produtos.html" target="_self">
+              <li>Produtos</li>
+            </a>
+            <a href="">
+              <li>Telas</li>
+            </a>
+            <a href="">
+              <li>Bastidor</li>
+            </a>
+            <a href="">
+              <li>Toalhas bordadas</li>
+            </a>
+          </ul>
+        </div>
+     
+        <div class="col-6 col-s-9">
+          <h1>Nossos Produtos</h1>
+            <main>
+                <article>
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                          <!--
+                          <div class="numbertext">1 / 3</div>
+                          -->
+                          <img src="imgs\1.jpeg" style="width:500px" height="400px">
+                            <div class="text">Tela</div>
+                        </div>        
+                        <div class="mySlides fade">           
+                          <img src="imgs\2.jpeg" style="width:500px" height="400px">
+                            <div class="text">Toalha</div>
+                        </div>        
+                        <div class="mySlides fade">
+                          <img src="imgs\3.jpeg" style="width:500px" height="400px">
+                              <div class="text">Bastidor</div>
+                        </div>                      
+                    </div>
+                    <br>
+        
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+        
+                    <script>
+                      let slideIndex = 0;
+                      showSlides();
+                      function showSlides() {
+                          let i;
+                          let slides = document.getElementsByClassName("mySlides");
+                          for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";
+                          }
+                          slideIndex++;
+                          if (slideIndex > slides.length) {slideIndex = 1}
+                          slides[slideIndex-1].style.display = "block";
+                          setTimeout(showSlides, 3000); // Change image every 2 seconds
+                      }
+                    </script>
+                </article>
+            </main>
+        </div>
+     
+        <div class="col-3 col-s-12">
+          <div class="aside">
+            <h2>Telas</h2>
+              <p>Tamanho da tela: 16x20cm  | 20x30cm | 30x30cm</p>
+            <h2>Bastidor</h2>
+              <p>Tamanho do bastidor: 16cm, 20cm e 25cm</p>
+            <h2>Toalhas</h2>
+              <p>Tamanho da toalha: Pequena, média e grande</p>
+          </div>
+        </div>
+      </div>
+     
+      <div class="footer">
+        <footer>&copy; Todos os direitos são reservados pela Loving Bordados</footer>
+      </div>
+</body>
+</html>
